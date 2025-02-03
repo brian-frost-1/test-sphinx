@@ -4,3 +4,6 @@ class MyPackage:
 
     def my_func(self):
         pass
+
+    def new_func(self):
+        pass
