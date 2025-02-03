@@ -27,7 +27,7 @@ jobs:
     - name: Push to Wiki
       run: |
         cd docs
-        git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/getathelas/test-sphinx.wiki.git wiki
+        git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/brian-frost-1/test-sphinx.wiki.git wiki
         cp -r build/markdown/index.md wiki/Home.md
         cd wiki
         git config user.name "GitHub Actions"
@@ -37,7 +37,7 @@ jobs:
           echo "No changes to commit."
         else
           git commit -m "Update Wiki with latest Sphinx documentation"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/getathelas/test-sphinx.wiki.git
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/brian-frost-1/test-sphinx.wiki.git
         fi
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
